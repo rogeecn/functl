@@ -1,0 +1,10 @@
+gen:
+  model:
+    dsn: __DSN
+    source: postgres
+    schema: public
+    path: ./database
+    ignores: [] # ignore tables
+    types:
+      kube_pods: # table name
+        labels: functl/pkg/pg.JsonMap # column type
