@@ -11,6 +11,7 @@ func GenCommand() *cobra.Command {
 	cmd.AddCommand(
 		genModelCommand(),
 		genServiceToHostCommand(),
+		genConfigMapToPath(),
 	)
 
 	return cmd
