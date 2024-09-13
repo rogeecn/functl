@@ -26,3 +26,4 @@ go.work.sum
 
 .fun.yaml
 database/*
+functl
