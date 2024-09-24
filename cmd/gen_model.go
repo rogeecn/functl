@@ -45,6 +45,7 @@ func genModelCommand() *cobra.Command {
 
 										return template.DefaultTableModel(table).UseField(func(column metadata.Column) template.TableModelField {
 											defaultTableModelField := template.DefaultTableModelField(column)
+											defaultTableModelField = defaultTableModelField.UseTags(fmt.Sprintf(`json:"%s"`, column.Name))
 
 											if schema.Name != conf.Schema {
 												return defaultTableModelField
@@ -66,10 +67,11 @@ func genModelCommand() *cobra.Command {
 											pkgSplits := strings.Split(splits[0], "/")
 											typePkg := pkgSplits[len(pkgSplits)-1]
 
-											defaultTableModelField.Type = template.Type{
-												Name:       fmt.Sprintf("%s.%s", typePkg, typeName),
-												ImportPath: splits[0],
-											}
+											defaultTableModelField = defaultTableModelField.
+												UseType(template.Type{
+													Name:       fmt.Sprintf("%s.%s", typePkg, typeName),
+													ImportPath: splits[0],
+												})
 
 											return defaultTableModelField
 										})
