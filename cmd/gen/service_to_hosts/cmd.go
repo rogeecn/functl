@@ -1,4 +1,4 @@
-package cmd
+package service_to_hosts
 
 import (
 	"context"
@@ -14,7 +14,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-func genServiceToHostCommand() *cobra.Command {
+func Command() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "service-to-host",
 		Aliases: []string{"sth"},

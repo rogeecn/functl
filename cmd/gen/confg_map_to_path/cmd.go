@@ -1,4 +1,4 @@
-package cmd
+package config_map_to_path
 
 import (
 	"context"
@@ -15,7 +15,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-func genConfigMapToPath() *cobra.Command {
+func Command() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "config-map-to-path",
 		Aliases: []string{"cmtp"},

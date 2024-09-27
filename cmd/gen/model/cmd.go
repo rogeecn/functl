@@ -1,4 +1,4 @@
-package cmd
+package model
 
 import (
 	"fmt"
@@ -15,7 +15,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func genModelCommand() *cobra.Command {
+func Command() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "model",
 		Short: "gen model",

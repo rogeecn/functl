@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"functl/cmd"
+	"functl/cmd/gen"
 	"functl/config"
 
 	"github.com/samber/lo"
@@ -49,7 +49,7 @@ func main() {
 	})
 
 	rootCmd.AddCommand(
-		cmd.GenCommand(),
+		gen.Command(),
 	)
 
 	err := rootCmd.Execute()
