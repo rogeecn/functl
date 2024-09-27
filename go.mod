@@ -1,8 +1,8 @@
-module functl
+module github.com/rogeecn/functl
 
 go 1.22.0
 
-toolchain go1.22.7
+toolchain go1.22.1
 
 require (
 	github.com/go-jet/jet/v2 v2.11.1
@@ -15,6 +15,7 @@ require (
 	github.com/smartystreets/goconvey v1.8.1
 	github.com/spf13/cobra v1.8.1
 	github.com/spf13/viper v1.19.0
+	golang.org/x/mod v0.17.0
 	k8s.io/apimachinery v0.31.1
 	k8s.io/client-go v0.31.1
 )

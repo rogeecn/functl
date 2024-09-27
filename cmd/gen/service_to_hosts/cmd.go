@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"functl/pkg/kube"
+	"github.com/rogeecn/functl/pkg/kube"
 
 	_ "github.com/lib/pq"
 	"github.com/pkg/errors"

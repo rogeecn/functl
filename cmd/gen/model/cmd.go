@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	. "functl/config"
+	. "github.com/rogeecn/functl/config"
 
 	"github.com/go-jet/jet/v2/generator/metadata"
 	"github.com/go-jet/jet/v2/generator/postgres"

@@ -9,8 +9,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"functl/cmd/gen"
-	"functl/config"
+	"github.com/rogeecn/functl/cmd/gen"
+	"github.com/rogeecn/functl/config"
 
 	"github.com/samber/lo"
 	"github.com/spf13/cobra"
